@@ -65,6 +65,10 @@
     height: 30px;
 }
 
+.white{
+    color: white
+}
+
 .bg-white{
     background-color: white;
 }
