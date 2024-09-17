@@ -5,51 +5,62 @@
     <title>Democratrade</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./scripts/handleJoin.js"></script>
+    <style>
+        body {
+            font-family: 'Poppins';
+        }
+    </style>
 </head>
 
 <body>
     <header class="container-fluid" id="navbar">
         <div class="row w-100">
-            <div class="col-10">
-                <h3 class="white">Democratrade</h3>
+            <div class="col-10 logo-div">
+
+                <h3 class="white"><img class="logo-img" src="images/Grey_logo.png">Democratrade</h3>
             </div>
             <div class="col">
-                <div class="joinButton right">
+                <div class="joinButton right" data-toggle="modal" data-target="#ModalSubscription">
                     Join Waitlist
                 </div>
             </div>
         </div>
     </header>
-    <div class="container">
-
-        <div class="row p-4">
-            <div class="col-sm-6" id="section1">
-                <h1 class="mb-4 fw-7">Earn from the Best</h1>
-                <h4 class="mb-5 fw-4">Follow along with some of the best traders to earn returns based on their real-time trades</h4>
-                <div class="wideButton mt-2">
-                    Learn More
+    <div class="container-fluid bg-grey no-padding">
+        <div class="container">
+            <div class="row p-4">
+                <div class="col-sm-6" id="section1">
+                    <h1 class="mb-4 fw-7" style="color: #0B1320">Earn from the Best</h1>
+                    <h4 class="mb-5 fw-4">Follow along with some of the best traders to earn returns based on their
+                        real-time trades</h4>
+                    <div class="wideButton mt-2">
+                        Learn More
+                    </div>
                 </div>
-            </div>
-            <div class="col-sm-6">
-                <img class="img-fluid right" style="max-height: 80vh;" src="phone.png" alt="">
+                <div class="col-sm-6">
+                    <img class="img-fluid right" style="max-height: 80vh;" src="images/phone.png" alt="">
+                </div>
             </div>
         </div>
     </div>
-
-    <div class="container-fluid" style="background-color: #185ADB; color: white;"> 
+    <div class="container-fluid blue-section">
         <div class="container">
             <div class="row p-4">
                 <div class="col-sm-6 pr-5" id="section1">
                     <h1 class="mb-4">Subscribe to Earn</h1>
-                    <h5 class="mb-5">Democratrade allows for the average investor to exponentially increase their earnings with expert traders. </h5>
-                    <div class="wideButton mt-2 bg-white color-blue">
+                    <h5 class="mb-5">Democratrade allows for the average investor to exponentially increase their
+                        earnings with expert traders. </h5>
+                    <a class="learnmore-link">
                         Learn More
-                    </div>
+                    </a>
                 </div>
                 <div class="col-sm-6" id="section2">
                     <div class="row mb-4">
@@ -58,7 +69,8 @@
                         </div>
                         <div class="col">
                             <h6>Learn</h6>
-                            <p>Understand the decisions made by top traders on the platform to know how they are making money.</p>
+                            <p>Understand the decisions made by top traders on the platform to know how they are making
+                                money.</p>
                         </div>
                     </div>
                     <div class="row mb-4">
@@ -67,7 +79,8 @@
                         </div>
                         <div class="col">
                             <h6>Earn</h6>
-                            <p>When traders you are subscribed to make active trades, you will be direct beneficiaries of each decision made. </p>
+                            <p>When traders you are subscribed to make active trades, you will be direct beneficiaries
+                                of each decision made. </p>
                         </div>
                     </div>
                     <div class="row">
@@ -81,38 +94,107 @@
                     </div>
                 </div>
             </div>
-        </div>     
+        </div>
     </div>
 
     <div class="container">
         <div class="row p-5">
-            <div class="col-sm-12">
+            <div class="col-sm-12" style="padding: 15px 0px;">
                 <h1 class="mb-4 fw-6 text-center">Earn from Democratrader’s Top Traders</h1>
             </div>
-            <div class="col-sm-12">
+            <div class="card-holder col-sm-12">
                 <div class="card">
                     <div class="d-flex">
-                        <div class="profileImage"></div>
+                        <div>
+                            <img class="profileImage" src="images/profileImg-unsplash.jpg" />
+                        </div>
                         <div class="ml-3">
                             <div class="name">Devon Loe</div>
                             <div class="subscribers">125k Subscribers</div>
                         </div>
                     </div>
-                    <div class="w-100 d-flex justify-content-between">
-                        <span>Value:</span>
-                        <span>$250.00</span>
+                    <div class="graph-title w-100 d-flex justify-content-between">
+                        <span class="labels">Value:</span>
+                        <span class="values">$250.00</span>
                     </div>
+                    <diV class="graph-img-container">
+                        <img class="graph-img" src="images/green-graph.PNG">
+                    </diV>
                     <div class="">
                         <table>
                             <tr>
-                                <th>ROI</th>
-                                <th>Total</th>
-                                <th>Risk</th>
+                                <th class="labels">ROI</th>
+                                <th class="labels">Total</th>
+                                <th class="labels">Risk</th>
                             </tr>
                             <tr>
-                                <td>+25%</td>
-                                <td>$251</td>
-                                <td>Low</td>
+                                <td class="values">+25%</td>
+                                <td class="values">$251</td>
+                                <td class="values">Low</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="d-flex">
+                        <div>
+                            <img class="profileImage" src="images/profileImg-unsplash.jpg" />
+                        </div>
+                        <div class="ml-3">
+                            <div class="name">Craig Boe</div>
+                            <div class="subscribers">125k Subscribers</div>
+                        </div>
+                    </div>
+                    <div class="graph-title w-100 d-flex justify-content-between">
+                        <span class="labels">Value:</span>
+                        <span class="values">$250.00</span>
+                    </div>
+                    <diV class="graph-img-container">
+                        <img class="graph-img" src="images/green-graph.PNG">
+                    </diV>
+                    <div class="">
+                        <table>
+                            <tr>
+                                <th class="labels">ROI</th>
+                                <th class="labels">Total</th>
+                                <th class="labels">Risk</th>
+                            </tr>
+                            <tr>
+                                <td class="values">+25%</td>
+                                <td class="values">$251</td>
+                                <td class="values">Low</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="d-flex">
+                        <div>
+                            <img class="profileImage" src="images/profileImg-unsplash.jpg" />
+                        </div>
+                        <div class="ml-3">
+                            <div class="name">Craig Boe</div>
+                            <div class="subscribers">125k Subscribers</div>
+                        </div>
+                    </div>
+                    <div class="graph-title w-100 d-flex justify-content-between">
+                        <span class="labels">Value:</span>
+                        <span class="values">$250.00</span>
+                    </div>
+                    <diV class="graph-img-container">
+                        <img class="graph-img" src="images/green-graph.PNG">
+                    </diV>
+                    <div class="">
+                        <table>
+                            <tr>
+                                <th class="labels">ROI</th>
+                                <th class="labels">Total</th>
+                                <th class="labels">Risk</th>
+                            </tr>
+                            <tr>
+                                <td class="values">+25%</td>
+                                <td class="values">$251</td>
+                                <td class="values">Low</td>
                             </tr>
                         </table>
                     </div>
@@ -121,29 +203,72 @@
         </div>
     </div>
 
-    <div class="container-fluid" style="background-color: #185ADB; color: white;"> 
-        <div class="container p-5" style="display: flex; place-content: space-around;">
-            <h1 class="p-0 m-0 fw-6">Ready to invest?</h1>
-            <div class="wideButton mt-2 bg-white color-blue">
+    <div class="container-fluid blue-section ">
+        <div class="container p-5 blue-section-join">
+            <h1 class="p-0 m-0 fw-5">Ready to invest?</h1>
+            <div class="wideButton bg-white color-blue fw-4" data-toggle="modal" data-target="#ModalSubscription"
+                style="font-weight: 600;">
                 Join Waitlist
             </div>
-        </div>     
+        </div>
     </div>
+    <div class="container-fluid bg-grey no-padding">
+        <div id='footer' class="container">
+            <div class="row p-5">
+                <div class="col-sm-12">
+                    <h3 class="mb-5" style="color: #185ADB">
+                        <img class="logo-img" src="images/Blue_logo.png">
+                        Democratrade
+                    </h3>
+                </div>
+                <div class="col-sm-12">
 
-    <div class="container">
-        <div class="row p-5">
-            <div class="col-sm-12">
-                <h3 class="mb-5" style="color: #185ADB">Democratrade</h3>
+                </div>
             </div>
-            <div class="col-sm-12">
-                <p class="gray">
-                    © 2021 Democratrade Limited | Disclosures | Accessibility
-                    <br/><br/>
-                    This website is operated by Acorns Advisers, LLC, an SEC Registered Investment Advisor.  Brokerage services are provided to clients of Acorns Advisers by Acorns Securities, LLC, an SEC registered broker-dealer and member FINRA.  Member of SIPC. Securities in your account protected up to $500,000. For details, please see https://www.sipc.org.  Checking accounts and debit cards are issued by Lincoln Savings Bank, Member FDIC.
-                    <br/><br/>
-                    Important Disclosures:  Investing involves risk, including loss of principal.  Past performance does not guarantee or indicate future results.  Please consider, among other important factors, your investment objectives, risk tolerance and Acorns pricing before investing.  Diversification and asset allocation do not guarantee a profit, nor do they eliminate the risk of loss of principal.  It is not possible to invest directly in an index.  Any hypothetical performance shown is for illustrative purposes only. Such results do not represent actual results and do not take into consideration economic or market factors which can impact performance. Actual clients may achieve investment 
-                </p>
+        </div>
+    </div>
+    <!--ModalDiv-->
+    <div class="modal fade" id="ModalSubscription" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-notify modal-warning" role="document">
+            <!--Content-->
+            <div class="modal-content">
+                <!--Header-->
+                <form id="waitListForm" name="waitlistForm" class="waitlistForm" action="#" method="post""
+                    autocomplete=" off">
+                    <div class="modal-header text-center">
+                        <h4 class="modal-title white-text w-100 font-weight-bold py-2">Join Waitlist</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true" class="white-text">&times;</span>
+                        </button>
+                    </div>
+
+                    <!--Body-->
+
+                    <div class="modal-body">
+                        <div class="md-form mb-3">
+                            <input placeholder="Name" type="text" id="waitListName" class="form-control validate"
+                                required>
+                            <label data-error="wrong" data-success="right" for="waitListName">Your name</label>
+                        </div>
+
+                        <div class="md-form">
+                            <input placeholder="Email" type="email" id="waitListEmail" class="form-control validate"
+                                required>
+                            <label data-error="wrong" data-success="right" for="waitListEmail">Your email</label>
+                        </div>
+                    </div>
+
+                    <!--Footer-->
+                    <div class="modal-footer justify-content-center">
+                        <input id='waitListJoin' name="waitListJoin" value="Join" class="joinButton waves-effect"
+                            style="border: none;" />
+                        <!-- <a type="button" class="joinButton waves-effect"
+                                style="color: white !important;text-decoration: none !important;">Send</a> -->
+                    </div>
+                </form>
             </div>
+            <!--/.Content-->
         </div>
     </div>
 </body>
